@@ -1,0 +1,46 @@
+{
+  "macro_panel_rows": 297,
+  "macro_panel_columns": 16,
+  "macro_date_start": "2001-01-01",
+  "macro_date_end": "2025-09-01",
+  "macro_duplicate_rows": 0,
+  "macro_missing_values": {
+    "date": 0,
+    "cpi_us": 0,
+    "cpi_goods": 0,
+    "cpi_services": 0,
+    "indpro": 0,
+    "oil_price": 3,
+    "gscpi": 0,
+    "cpi_yoy": 0,
+    "cpi_goods_yoy": 0,
+    "cpi_services_yoy": 0,
+    "indpro_yoy": 0,
+    "oil_yoy": 3,
+    "dwell_composite": 96,
+    "dwell_la_raw": 96,
+    "la_unique_vessels": 96,
+    "dwell_la_detrended": 96
+  },
+  "la_dwell_coverage_start": "2009-01-01",
+  "la_dwell_coverage_end": "2025-09-01",
+  "la_dwell_gscpi_pearson": 0.5861878227953943,
+  "port_panel_rows": 1016,
+  "ports": [
+    "Houston",
+    "LA_Long_Beach",
+    "NY_NJ",
+    "Savannah",
+    "Seattle"
+  ],
+  "port_panel_month_start": "2009-01-01",
+  "port_panel_month_end": "2025-12-01",
+  "port_month_duplicates": 0,
+  "mean_dwell_by_port": {
+    "Houston": 4.503,
+    "LA_Long_Beach": 4.94,
+    "NY_NJ": 3.527,
+    "Savannah": 1.894,
+    "Seattle": 4.418
+  }
+}

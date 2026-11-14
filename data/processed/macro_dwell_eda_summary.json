@@ -1,0 +1,65 @@
+{
+  "rows": 297,
+  "columns": 16,
+  "date_start": "2001-01-01",
+  "date_end": "2025-09-01",
+  "duplicate_rows": 0,
+  "duplicate_dates": 0,
+  "missing_values": {
+    "date": 0,
+    "cpi_us": 0,
+    "cpi_goods": 0,
+    "cpi_services": 0,
+    "indpro": 0,
+    "oil_price": 3,
+    "gscpi": 0,
+    "cpi_yoy": 0,
+    "cpi_goods_yoy": 0,
+    "cpi_services_yoy": 0,
+    "indpro_yoy": 0,
+    "oil_yoy": 3,
+    "dwell_composite": 96,
+    "dwell_la_raw": 96,
+    "la_unique_vessels": 96,
+    "dwell_la_detrended": 96
+  },
+  "dwell_coverage_start": "2009-01-01",
+  "dwell_coverage_end": "2025-09-01",
+  "dwell_rows": 201,
+  "correlations_with_dwell_la_raw": {
+    "gscpi": 0.5862,
+    "cpi_yoy": 0.3291,
+    "cpi_goods_yoy": 0.2939,
+    "cpi_services_yoy": 0.2422,
+    "indpro_yoy": 0.0491,
+    "oil_yoy": 0.1865
+  },
+  "correlations_with_dwell_composite": {
+    "gscpi": 0.2183,
+    "cpi_yoy": 0.1704,
+    "cpi_goods_yoy": 0.2296,
+    "cpi_services_yoy": 0.0012,
+    "indpro_yoy": 0.1455,
+    "oil_yoy": 0.2547
+  },
+  "dwell_la_raw_summary": {
+    "count": 201.0,
+    "mean": 4.9362,
+    "std": 0.8841,
+    "min": 1.7139,
+    "25%": 4.3523,
+    "50%": 4.8661,
+    "75%": 5.2839,
+    "max": 7.7308
+  },
+  "la_unique_vessels_summary": {
+    "count": 201.0,
+    "mean": 308.5,
+    "std": 62.46,
+    "min": 77.0,
+    "25%": 275.0,
+    "50%": 325.0,
+    "75%": 350.0,
+    "max": 459.0
+  }
+}

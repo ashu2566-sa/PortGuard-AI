@@ -1,0 +1,514 @@
+{
+  "records": 1007,
+  "ports": [
+    "Houston",
+    "LA_Long_Beach",
+    "NY_NJ",
+    "Savannah",
+    "Seattle"
+  ],
+  "train_rows": 802,
+  "test_rows": 205,
+  "train_target_month_end": "2022-07-01",
+  "test_target_month_start": "2022-08-01",
+  "cutoff_target_month": "2022-08-01",
+  "port_thresholds_days": {
+    "Houston": 4.809663940910611,
+    "LA_Long_Beach": 5.336481762684892,
+    "NY_NJ": 3.733868390858159,
+    "Savannah": 2.002643566579935,
+    "Seattle": 4.577156620498772
+  },
+  "train_positive_rate": 0.2518703241895262,
+  "test_positive_rate": 0.4975609756097561,
+  "selected_model": "logistic_regression",
+  "selection_method": "expanding_window_time_series_cross_validation_OOF_F2_then_PR_AUC",
+  "selected_classification_threshold": 0.2932041407320739,
+  "selected_port_classification_thresholds": {
+    "Houston": {
+      "threshold": 0.8390419446704561,
+      "status": "port_specific_threshold_selected",
+      "oof_positives": 38,
+      "oof_f2": 0.24242424242424243,
+      "oof_recall": 0.21052631578947367,
+      "oof_precision": 0.6153846153846154,
+      "precision_constraint": 0.6
+    },
+    "LA_Long_Beach": {
+      "threshold": 0.31247800170844175,
+      "status": "port_specific_threshold_selected",
+      "oof_positives": 79,
+      "oof_f2": 0.9168704156479217,
+      "oof_recall": 0.9493670886075949,
+      "oof_precision": 0.8064516129032258,
+      "precision_constraint": 0.6
+    },
+    "NY_NJ": {
+      "threshold": 0.2932041407320739,
+      "status": "global_fallback_precision_constraint_unattainable",
+      "oof_positives": 9,
+      "precision_constraint": 0.6
+    },
+    "Savannah": {
+      "threshold": 0.43058588055648117,
+      "status": "port_specific_threshold_selected",
+      "oof_positives": 46,
+      "oof_f2": 0.6595744680851063,
+      "oof_recall": 0.6739130434782609,
+      "oof_precision": 0.6078431372549019,
+      "precision_constraint": 0.6
+    },
+    "Seattle": {
+      "threshold": 0.4252242210790229,
+      "status": "port_specific_threshold_selected",
+      "oof_positives": 40,
+      "oof_f2": 0.7345971563981043,
+      "oof_recall": 0.775,
+      "oof_precision": 0.6078431372549019,
+      "precision_constraint": 0.6
+    }
+  },
+  "port_level_test_metrics": {
+    "Houston": {
+      "records": 41,
+      "actual_congestion": 1,
+      "predicted_congestion": 0,
+      "true_positive": 0,
+      "false_positive": 0,
+      "false_negative": 1,
+      "precision": 0.0,
+      "recall": 0.0,
+      "f2": 0.0
+    },
+    "LA_Long_Beach": {
+      "records": 41,
+      "actual_congestion": 6,
+      "predicted_congestion": 28,
+      "true_positive": 6,
+      "false_positive": 22,
+      "false_negative": 0,
+      "precision": 0.21428571428571427,
+      "recall": 1.0,
+      "f2": 0.5769230769230769
+    },
+    "NY_NJ": {
+      "records": 41,
+      "actual_congestion": 17,
+      "predicted_congestion": 32,
+      "true_positive": 17,
+      "false_positive": 15,
+      "false_negative": 0,
+      "precision": 0.53125,
+      "recall": 1.0,
+      "f2": 0.85
+    },
+    "Savannah": {
+      "records": 41,
+      "actual_congestion": 39,
+      "predicted_congestion": 39,
+      "true_positive": 38,
+      "false_positive": 1,
+      "false_negative": 1,
+      "precision": 0.9743589743589743,
+      "recall": 0.9743589743589743,
+      "f2": 0.9743589743589743
+    },
+    "Seattle": {
+      "records": 41,
+      "actual_congestion": 39,
+      "predicted_congestion": 41,
+      "true_positive": 39,
+      "false_positive": 2,
+      "false_negative": 0,
+      "precision": 0.9512195121951219,
+      "recall": 1.0,
+      "f2": 0.9898477157360406
+    }
+  },
+  "cross_validation": {
+    "logistic_regression": {
+      "fold_pr_auc": [
+        0.4058950778903654,
+        0.5497714201960772,
+        0.8472003901116544
+      ],
+      "mean_pr_auc": 0.6009556293993656,
+      "valid_folds": 3,
+      "oof_threshold_selection": {
+        "threshold": 0.2932041407320739,
+        "f2": 0.7790697674418605,
+        "precision": 0.45475113122171945,
+        "recall": 0.9481132075471698
+      },
+      "oof_port_thresholds": {
+        "Houston": {
+          "threshold": 0.8390419446704561,
+          "status": "port_specific_threshold_selected",
+          "oof_positives": 38,
+          "oof_f2": 0.24242424242424243,
+          "oof_recall": 0.21052631578947367,
+          "oof_precision": 0.6153846153846154,
+          "precision_constraint": 0.6
+        },
+        "LA_Long_Beach": {
+          "threshold": 0.31247800170844175,
+          "status": "port_specific_threshold_selected",
+          "oof_positives": 79,
+          "oof_f2": 0.9168704156479217,
+          "oof_recall": 0.9493670886075949,
+          "oof_precision": 0.8064516129032258,
+          "precision_constraint": 0.6
+        },
+        "NY_NJ": {
+          "threshold": 0.2932041407320739,
+          "status": "global_fallback_precision_constraint_unattainable",
+          "oof_positives": 9,
+          "precision_constraint": 0.6
+        },
+        "Savannah": {
+          "threshold": 0.43058588055648117,
+          "status": "port_specific_threshold_selected",
+          "oof_positives": 46,
+          "oof_f2": 0.6595744680851063,
+          "oof_recall": 0.6739130434782609,
+          "oof_precision": 0.6078431372549019,
+          "precision_constraint": 0.6
+        },
+        "Seattle": {
+          "threshold": 0.4252242210790229,
+          "status": "port_specific_threshold_selected",
+          "oof_positives": 40,
+          "oof_f2": 0.7345971563981043,
+          "oof_recall": 0.775,
+          "oof_precision": 0.6078431372549019,
+          "precision_constraint": 0.6
+        }
+      }
+    },
+    "random_forest": {
+      "fold_pr_auc": [
+        0.5270417155352676,
+        0.6226929326304732,
+        0.7893358138803641
+      ],
+      "mean_pr_auc": 0.6463568206820349,
+      "valid_folds": 3,
+      "oof_threshold_selection": {
+        "threshold": 0.20210809571957952,
+        "f2": 0.7587548638132295,
+        "precision": 0.4462242562929062,
+        "recall": 0.9198113207547169
+      },
+      "oof_port_thresholds": {
+        "Houston": {
+          "threshold": 0.5953484146166916,
+          "status": "port_specific_threshold_selected",
+          "oof_positives": 38,
+          "oof_f2": 0.15625,
+          "oof_recall": 0.13157894736842105,
+          "oof_precision": 0.625,
+          "precision_constraint": 0.6
+        },
+        "LA_Long_Beach": {
+          "threshold": 0.263541809863135,
+          "status": "port_specific_threshold_selected",
+          "oof_positives": 79,
+          "oof_f2": 0.9344660194174758,
+          "oof_recall": 0.9746835443037974,
+          "oof_precision": 0.8020833333333334,
+          "precision_constraint": 0.6
+        },
+        "NY_NJ": {
+          "threshold": 0.20210809571957952,
+          "status": "global_fallback_precision_constraint_unattainable",
+          "oof_positives": 9,
+          "precision_constraint": 0.6
+        },
+        "Savannah": {
+          "threshold": 0.5057875801253385,
+          "status": "port_specific_threshold_selected",
+          "oof_positives": 46,
+          "oof_f2": 0.053475935828877004,
+          "oof_recall": 0.043478260869565216,
+          "oof_precision": 0.6666666666666666,
+          "precision_constraint": 0.6
+        },
+        "Seattle": {
+          "threshold": 0.360704811624989,
+          "status": "port_specific_threshold_selected",
+          "oof_positives": 40,
+          "oof_f2": 0.6585365853658537,
+          "oof_recall": 0.675,
+          "oof_precision": 0.6,
+          "precision_constraint": 0.6
+        }
+      }
+    },
+    "xgboost": {
+      "fold_pr_auc": [
+        0.5614407947606606,
+        0.5210655334055299,
+        0.6930832683340175
+      ],
+      "mean_pr_auc": 0.5918631988334027,
+      "valid_folds": 3,
+      "oof_threshold_selection": {
+        "threshold": 0.011762134730815887,
+        "f2": 0.7408707865168539,
+        "precision": 0.3663194444444444,
+        "recall": 0.9952830188679245
+      },
+      "oof_port_thresholds": {
+        "Houston": {
+          "threshold": 0.7187793254852295,
+          "status": "port_specific_threshold_selected",
+          "oof_positives": 38,
+          "oof_f2": 0.24242424242424243,
+          "oof_recall": 0.21052631578947367,
+          "oof_precision": 0.6153846153846154,
+          "precision_constraint": 0.6
+        },
+        "LA_Long_Beach": {
+          "threshold": 0.16308432817459106,
+          "status": "port_specific_threshold_selected",
+          "oof_positives": 79,
+          "oof_f2": 0.918854415274463,
+          "oof_recall": 0.9746835443037974,
+          "oof_precision": 0.7475728155339806,
+          "precision_constraint": 0.6
+        },
+        "NY_NJ": {
+          "threshold": 0.011762134730815887,
+          "status": "global_fallback_precision_constraint_unattainable",
+          "oof_positives": 9,
+          "precision_constraint": 0.6
+        },
+        "Savannah": {
+          "threshold": 0.011762134730815887,
+          "status": "global_fallback_precision_constraint_unattainable",
+          "oof_positives": 46,
+          "precision_constraint": 0.6
+        },
+        "Seattle": {
+          "threshold": 0.3491416275501251,
+          "status": "port_specific_threshold_selected",
+          "oof_positives": 40,
+          "oof_f2": 0.5670103092783505,
+          "oof_recall": 0.55,
+          "oof_precision": 0.6470588235294118,
+          "precision_constraint": 0.6
+        }
+      }
+    }
+  },
+  "selected_model_test_metrics": {
+    "model": "logistic_regression",
+    "classification_threshold": "port_specific; see port_classification_thresholds",
+    "accuracy": 0.7951219512195122,
+    "precision": 0.7142857142857143,
+    "recall": 0.9803921568627451,
+    "f1": 0.8264462809917356,
+    "f2": 0.9124087591240876,
+    "roc_auc": 0.9370835712925948,
+    "pr_auc": 0.9345833980221403,
+    "brier_score": 0.125461819066333,
+    "confusion_matrix": [
+      [
+        63,
+        40
+      ],
+      [
+        2,
+        100
+      ]
+    ],
+    "threshold_strategy": "port_specific_with_global_fallback",
+    "port_level_metrics": {
+      "Houston": {
+        "records": 41,
+        "actual_congestion": 1,
+        "predicted_congestion": 0,
+        "true_positive": 0,
+        "false_positive": 0,
+        "false_negative": 1,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f2": 0.0
+      },
+      "LA_Long_Beach": {
+        "records": 41,
+        "actual_congestion": 6,
+        "predicted_congestion": 28,
+        "true_positive": 6,
+        "false_positive": 22,
+        "false_negative": 0,
+        "precision": 0.21428571428571427,
+        "recall": 1.0,
+        "f2": 0.5769230769230769
+      },
+      "NY_NJ": {
+        "records": 41,
+        "actual_congestion": 17,
+        "predicted_congestion": 32,
+        "true_positive": 17,
+        "false_positive": 15,
+        "false_negative": 0,
+        "precision": 0.53125,
+        "recall": 1.0,
+        "f2": 0.85
+      },
+      "Savannah": {
+        "records": 41,
+        "actual_congestion": 39,
+        "predicted_congestion": 39,
+        "true_positive": 38,
+        "false_positive": 1,
+        "false_negative": 1,
+        "precision": 0.9743589743589743,
+        "recall": 0.9743589743589743,
+        "f2": 0.9743589743589743
+      },
+      "Seattle": {
+        "records": 41,
+        "actual_congestion": 39,
+        "predicted_congestion": 41,
+        "true_positive": 39,
+        "false_positive": 2,
+        "false_negative": 0,
+        "precision": 0.9512195121951219,
+        "recall": 1.0,
+        "f2": 0.9898477157360406
+      }
+    }
+  },
+  "test_model_comparison": [
+    {
+      "model": "logistic_regression",
+      "classification_threshold": 0.2932041407320739,
+      "accuracy": 0.7365853658536585,
+      "precision": 0.6578947368421053,
+      "recall": 0.9803921568627451,
+      "f1": 0.7874015748031497,
+      "f2": 0.8928571428571429,
+      "roc_auc": 0.9370835712925948,
+      "pr_auc": 0.9345833980221403,
+      "brier_score": 0.125461819066333,
+      "confusion_matrix": [
+        [
+          51,
+          52
+        ],
+        [
+          2,
+          100
+        ]
+      ]
+    },
+    {
+      "model": "random_forest",
+      "classification_threshold": 0.20210809571957952,
+      "accuracy": 0.6390243902439025,
+      "precision": 0.5921052631578947,
+      "recall": 0.8823529411764706,
+      "f1": 0.7086614173228346,
+      "f2": 0.8035714285714286,
+      "roc_auc": 0.8166761850371217,
+      "pr_auc": 0.8168622184683575,
+      "brier_score": 0.20180046828440906,
+      "confusion_matrix": [
+        [
+          41,
+          62
+        ],
+        [
+          12,
+          90
+        ]
+      ]
+    },
+    {
+      "model": "xgboost",
+      "classification_threshold": 0.011762134730815887,
+      "accuracy": 0.4975609756097561,
+      "precision": 0.4975609756097561,
+      "recall": 1.0,
+      "f1": 0.6644951140065146,
+      "f2": 0.831973898858075,
+      "roc_auc": 0.8251475347420523,
+      "pr_auc": 0.8379379378845276,
+      "brier_score": 0.17876514792442322,
+      "confusion_matrix": [
+        [
+          0,
+          103
+        ],
+        [
+          0,
+          102
+        ]
+      ]
+    }
+  ],
+  "top_permutation_features": [
+    {
+      "feature": "Port",
+      "importance_mean": 0.3538843844402616,
+      "importance_std": 0.031359834116928983
+    },
+    {
+      "feature": "UniqueVessels",
+      "importance_mean": 0.33924979653602794,
+      "importance_std": 0.037215927469958346
+    },
+    {
+      "feature": "MeanDwellDays",
+      "importance_mean": 0.10222063631890861,
+      "importance_std": 0.025005141746106456
+    },
+    {
+      "feature": "rolling_3m_dwell",
+      "importance_mean": 0.09462727627894937,
+      "importance_std": 0.024331913620730766
+    },
+    {
+      "feature": "StdDwellDays",
+      "importance_mean": 0.09075937865566566,
+      "importance_std": 0.012768939862564659
+    },
+    {
+      "feature": "MedianDwellDays",
+      "importance_mean": 0.050299233441038406,
+      "importance_std": 0.007244414716999168
+    },
+    {
+      "feature": "TotalObservations",
+      "importance_mean": 0.033734032358683684,
+      "importance_std": 0.011299437925811007
+    },
+    {
+      "feature": "AvgVesselLength",
+      "importance_mean": 0.01874781788951089,
+      "importance_std": 0.011007187454397306
+    },
+    {
+      "feature": "month_num",
+      "importance_mean": 0.010352847829323119,
+      "importance_std": 0.004938513662969923
+    },
+    {
+      "feature": "dwell_change_1m",
+      "importance_mean": 0.0025247479898825587,
+      "importance_std": 0.0006578582799865821
+    }
+  ],
+  "notes": [
+    "The final test set was not used for model or threshold selection.",
+    "Model selection prioritizes pooled chronological out-of-fold F2; PR-AUC breaks ties.",
+    "Global and port-specific classification thresholds are tuned on training-only out-of-fold probabilities.",
+    "Port thresholds require at least 8 OOF positives and 60% OOF precision; otherwise the global threshold is used and the fallback is reported.",
+    "Congestion thresholds were fitted on training data only.",
+    "CV fold labels use thresholds fitted separately within each fold.",
+    "Calibration was not applied because the prior calibrated model materially degraded classification performance.",
+    "GSCPI availability/release timing must be verified before operational use."
+  ]
+}
